@@ -1,0 +1,31 @@
+{
+    "configurations": [
+        {
+            "name": "Debug mapextract",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/mapextract",
+            "args": ["-i", "/home/hermsenl/Nextcloud/Auto/02_subrina/01_ssm_lib/02_rom/subrina/20250518_0x0-0xFFFF.bin",
+                     "-o", "/home/hermsenl/Nextcloud/Auto/02_subrina/01_ssm_lib/02_rom/subrina/fuelMap.csv",
+                     "-m", "0x8120", 
+                     "-x", "0x8110",
+                     "-y", "0x8100",
+                     "-l", "16"
+                    ],  
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/bin",
+            "environment": [],
+            "externalConsole": false,  // maybe you want a real terminal here
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "setupCommands": [
+                {
+                "description": "Enable pretty-printing",
+                "text": "-enable-pretty-printing",
+                "ignoreFailures": true
+                }]
+        }
+    ],
+    
+    "version": "2.0.0"
+}
